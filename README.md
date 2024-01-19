@@ -32,5 +32,9 @@ This project focuses on the efficient decompression of a **320x240 image** using
 
 5. **VGA Display:**
    The recovered image data is sent to a VGA controller for display on a monitor.
+   
+## Acknowledgments
+
+This project combines hardware and software to develop a Hardware Image Decompressor on an Altera DE2 board. The system efficiently processes compressed data for a 320 x 240-pixel image, using a Verilog program to configure the FPGA for image recovery and display. Finite state machines in SystemVerilog optimize decompression, leveraging various components for efficiency. Refer to the project report for specific details on the components used.
 
 
