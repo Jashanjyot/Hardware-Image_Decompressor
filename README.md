@@ -32,6 +32,15 @@ This project focuses on the efficient decompression of a **320x240 image** using
 
 5. **VGA Display:**
    The recovered image data is sent to a VGA controller for display on a monitor.
+
+## **Dependencies**
+
+- Altera DE2 Board
+- Quartus II
+- SystemVerilog
+- UART Interface
+- External SRAM
+- VGA Controller
    
 ## Acknowledgments
 
