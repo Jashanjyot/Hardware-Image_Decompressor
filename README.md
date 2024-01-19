@@ -1,20 +1,36 @@
-## COE3DQ5 project
+# Hardware Image Decompressor | SystemVerilog
 
-### Objective
+This project focuses on the efficient decompression of a **320x240 image** using a hardware platform based on the **Altera DE2 board**. The implementation utilizes **SystemVerilog** and involves a set of carefully designed finite state machines. The goal is to enhance hardware design proficiency by strategically implementing various components, including shift registers, multipliers, adders, dual-port RAMs, and intricate state machine structures, with a focus on leveraging symmetry for reduced clock cycles.
 
-The main objective of the COE3DQ5 project is to make students comfortable to work on a larger design (than the labs) that also includes the hardware implementation of several types of digital signal processing algorithms. In addition, the hardware design and implementation must meet the 50 MHz clock constraint, some latency constraints (defined indirectly through multiplier utilization constraints), while ensuring that hardware resources are not wasted.
+## Key Features
 
-### Preparation
+- **Altera DE2 Board:** The project is implemented and tested on the **Altera DE2 board**, serving as the hardware platform for the decompression process.
 
-The design code from the rtl sub-folder contains a copy of the code released for experiment 4 from lab 5, which is the start-up code for the project (note, only the top-level module name `experiment4` has been changed to `project`). 
+- **Finite State Machines:** A set of finite state machines is designed to efficiently decompress compressed data corresponding to a **320x240-pixel image**.
 
-In terms of verification, there are two main additions: a software model of the image decoder is provided in the `sw` sub-folder and the backbones for two additional testbenches are provided in the `tb` sub-folder (they can be compiled to replace the default lab 5 experiment 4 testbench by updating `compile.do` in the `sim` sub-folder).
+- **Hardware Components:** The project strategically employs shift registers, multipliers, adders, dual-port RAMs, and intricate state machine structures to achieve optimized decompression. Symmetry is leveraged to reduce clock cycles and enhance overall efficiency.
 
-* Revise the five labs
-* Read [this](doc/3dq5-2022-project-description.pdf) detailed project document and get familiarized with the software model from the `sw` sub-folder 
-* Attend the forthcoming classes because they are focused almost exclusively on the project (conceptual understanding, main challenges, thought process, design decisions, verification plan, ...)
-* If needed, any updates, changes, revisions, ... will be communicated to the entire class in due time
+- **UART Interface:** Compressed data for the **320x240-pixel image** is processed via a **UART interface**, facilitating communication between the system and the **Altera DE2-115 board**.
 
-### Evaluation
+- **External SRAM:** The compressed image data is received and stored in an **external SRAM** for efficient processing.
 
-Push your source code and the 6-page report in GitHub before Monday November 28 at 11 pm. The report should be in PDF format and should be placed in the `doc` sub-folder. Further details concerning the expectations for the project report and the cross-examinations in the week of November 28 will be provided in due time.
+- **Verilog Program:** A Verilog program, utilizing **Quartus II**, is written to configure the FPGA on the **Altera DE2 board**. This program enables the FPGA to read and recover the compressed image data, sending it to a VGA controller for display on a monitor.
+
+## Project Workflow
+
+1. **Data Reception:**
+   Compressed data for the **320x240-pixel image** is received via the **UART interface**.
+
+2. **Storage:**
+   The received compressed image data is stored in an **external SRAM** for efficient processing.
+
+3. **Decompression:**
+   Finite state machines and hardware components are utilized to decompress the image data.
+
+4. **FPGA Configuration:**
+   A Verilog program written in **Quartus II** configures the FPGA on the **Altera DE2 board**.
+
+5. **VGA Display:**
+   The recovered image data is sent to a VGA controller for display on a monitor.
+
+
