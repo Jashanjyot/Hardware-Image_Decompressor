@@ -1,0 +1,155 @@
+`ifndef DEFINE_STATE
+
+// for top state - we have more states than needed
+typedef enum logic [1:0] {
+	S_IDLE,
+	S_UART_RX,
+	S_M1,
+	S_M2
+} top_state_type;
+
+typedef enum logic [1:0] {
+	S_RXC_IDLE,
+	S_RXC_SYNC,
+	S_RXC_ASSEMBLE_DATA,
+	S_RXC_STOP_BIT
+} RX_Controller_state_type;
+
+typedef enum logic [2:0] {
+	S_US_IDLE,
+	S_US_STRIP_FILE_HEADER_1,
+	S_US_STRIP_FILE_HEADER_2,
+	S_US_START_FIRST_BYTE_RECEIVE,
+	S_US_WRITE_FIRST_BYTE,
+	S_US_START_SECOND_BYTE_RECEIVE,
+	S_US_WRITE_SECOND_BYTE
+} UART_SRAM_state_type;
+
+typedef enum logic [3:0] {
+	S_VS_WAIT_NEW_PIXEL_ROW,
+	S_VS_NEW_PIXEL_ROW_DELAY_1,
+	S_VS_NEW_PIXEL_ROW_DELAY_2,
+	S_VS_NEW_PIXEL_ROW_DELAY_3,
+	S_VS_NEW_PIXEL_ROW_DELAY_4,
+	S_VS_NEW_PIXEL_ROW_DELAY_5,
+	S_VS_FETCH_PIXEL_DATA_0,
+	S_VS_FETCH_PIXEL_DATA_1,
+	S_VS_FETCH_PIXEL_DATA_2,
+	S_VS_FETCH_PIXEL_DATA_3
+} VGA_SRAM_state_type;
+
+typedef enum logic [5:0] {
+	M1_IDLE,
+	M1_LI0,
+	M1_LI1,
+	M1_LI2,
+	M1_LI3,
+	M1_LI4,
+	M1_LI5,
+	M1_LI6,
+	M1_LI7,
+	M1_LI8,
+	M1_LI9,
+	M1_LI10,
+	M1_LI11,
+	M1_CC0,
+	M1_CC1,
+	M1_CC2,
+	M1_CC3,
+	M1_CC4,
+	M1_CC5,
+	M1_CC6,
+	M1_CC7,
+	M1_CC8,
+	M1_CC9,
+	M1_CC10,
+	M1_CC11,
+	M1_CC12,
+	M1_CC13,
+	M1_CC14,
+	M1_CC15,
+	M1_LO0,
+	M1_LO1,
+	M1_LO2,
+	M1_LO3,
+	M1_LO4,
+	M1_LO5,
+	M1_LO6,
+	M1_LO7,
+	M1_LO8,
+	M1_LO9,
+	M1_LO10,
+	M1_LO11,
+	M1_LO12,
+	M1_LO13,
+	M1_LO14,
+	M1_LO15,
+	M1_LO16,
+	M1_LO17,
+	M1_LO18,
+	M1_LO19,
+	M1_LO20,
+	M1_LO21,
+	M1_LO22,
+	M1_LO23,
+	M1_LO24,
+	M1_LO25,
+	M1_LO26,
+	M1_LO27,
+	M1_LO28
+	
+} M1_state_type;
+
+typedef enum logic [7:0] {
+	M2_LI_FS0,
+	M2_LI_FS1,
+	M2_LI_FS2,
+	M2_LI_FS3,
+	M2_LI_FS4,
+	M2_LI_FS5,
+	M2_LI_FS6,
+	M2_LI_FS7,
+	M2_LI_FS8,
+	M2_LI_FS9,
+	M2_LI_FS10,
+	M2_LI_SC0,
+	M2_LI_SC1,
+	M2_LI_SC2,
+	M2_LI_SC3,
+	M2_LI_SC4,
+	M2_LI_SC5,
+	M2_LI_SC6,
+	M2_LI_SC7,
+	M2_LI_SC8,
+	M2_LI_SC9,
+	M2_CC_FS0,
+	M2_CC_FS1,
+	M2_CC_FS2,
+	M2_CC_FS3,
+	M2_CC_FS4,
+	M2_CC_FS5,
+	M2_CC_FS6,
+	M2_CC_SC0,
+	M2_CC_SC1,
+	M2_CC_SC2,
+	M2_CC_SC3,
+	M2_CC_SC4,
+	M2_LO_S0,
+	M2_LO_S1,
+	M2_LO_S2,
+	M2_LO_S3,
+	M2_LO_S4,
+	M2_LO_WS0,
+	M2_LO_WS1,
+	M2_LO_WS2
+
+} M2_state_type;
+
+parameter 
+   VIEW_AREA_LEFT = 160,
+   VIEW_AREA_RIGHT = 480,
+   VIEW_AREA_TOP = 120,
+   VIEW_AREA_BOTTOM = 360;
+
+`define DEFINE_STATE 1
+`endif
