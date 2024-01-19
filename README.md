@@ -1,6 +1,6 @@
 # Hardware Image Decompressor
 
-This project focuses on the efficient decompression of a **320x240 image** using a hardware platform based on the **Altera DE2 board**. The implementation utilizes **SystemVerilog** and involves a set of carefully designed finite state machines. The goal is to enhance hardware design proficiency by strategically implementing various components, including shift registers, multipliers, adders, dual-port RAMs, and intricate state machine structures, with a focus on leveraging symmetry for reduced clock cycles.
+This project focuses on the efficient decompression of a **320x240 image** using a hardware platform based on the **Altera DE2 board**. The implementation utilizes **SystemVerilog** and involves a set of carefully designed finite state machines. The goal is to enhance hardware design proficiency by strategically implementing various components, including shift registers, multipliers, adders, dual-port RAMs, and intricate state machine structures, with a focus on leveraging symmetry for reduced clock cycles. Refer to the project [report](doc/Group34_ProjectReport.pdf) for specific details on the components used.
 
 ## Key Features
 
@@ -44,6 +44,6 @@ This project focuses on the efficient decompression of a **320x240 image** using
    
 ## Acknowledgments
 
-This project combines hardware and software to develop a Hardware Image Decompressor on an Altera DE2 board. The system efficiently processes compressed data for a 320 x 240-pixel image, using a Verilog program to configure the FPGA for image recovery and display. Finite state machines in SystemVerilog optimize decompression, leveraging various components for efficiency. Refer to the project report for specific details on the components used.
+This project combines hardware and software to develop a Hardware Image Decompressor on an Altera DE2 board. The system efficiently processes compressed data for a 320 x 240-pixel image, using a Verilog program to configure the FPGA for image recovery and display. Finite state machines in SystemVerilog optimize decompression, leveraging various components for efficiency.
 
 
