@@ -1,4 +1,4 @@
-# Hardware Image Decompressor | SystemVerilog
+# Hardware Image Decompressor
 
 This project focuses on the efficient decompression of a **320x240 image** using a hardware platform based on the **Altera DE2 board**. The implementation utilizes **SystemVerilog** and involves a set of carefully designed finite state machines. The goal is to enhance hardware design proficiency by strategically implementing various components, including shift registers, multipliers, adders, dual-port RAMs, and intricate state machine structures, with a focus on leveraging symmetry for reduced clock cycles.
 
